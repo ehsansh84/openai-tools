@@ -1,10 +1,10 @@
 import openai
 import requests
 from requests.structures import CaseInsensitiveDict
-
+import os
 import json
 
-openai.api_key = "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"
+openai.api_key = os.environ['OPENAI_API_KEY']
 
 def generate_image(prompt):
     headers = CaseInsensitiveDict()
